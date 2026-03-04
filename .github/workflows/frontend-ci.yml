@@ -35,7 +35,7 @@ jobs:
       - name: Checkout deployment repo
         uses: actions/checkout@v4
         with:
-          repository: dockermajid/witnot-deployment
+          repository: majid-gt/witnot-deployment
           token: ${{ secrets.GH_PAT }}
           path: deployment
 
