@@ -19,6 +19,8 @@ const ExamDashboard: React.FC = () => {
   const hasFetchedRef = useRef(false); 
 
   const isExamUnlocked = currentTime >= examUnlockTime;
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+
 
   useEffect(() => {
     const userName = localStorage.getItem('userName');
@@ -36,7 +38,7 @@ const ExamDashboard: React.FC = () => {
       }
 
       try {
-        const response = await fetch('http://10.68.179.254:8000/api/dashboard', {
+        const response = await fetch(`${API_BASE_URL}/dashboard`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${accessToken}`,

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import image from "../assets/image.png"
+import cheating from "../assets/cheating.png"
 
 interface LoginProps {
   onLogin?: () => void; //optional
 }
 
-const LOGIN_API_URL = "http://10.68.179.254:8000/api/login/";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+const LOGIN_API_URL = `${API_BASE_URL}/login/`;
 const THANK_YOU_PAGE_URL = "/thanku";
 const MAX_LOGIN_ATTEMPTS = 3;
 const LOGIN_ATTEMPTS_KEY = "consecutiveLoginFails";
@@ -390,13 +393,13 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         <div className="left-panel">
           <div className="left-panel-collab">
             {/* Note: Ensure the path to your assets is correct */}
-            <img src="src/assets/image.png" alt="image" className="left-panel-witnot" /> 
+            <img src={image} alt="image" className="left-panel-witnot" />
             <div className="left-panel-content"></div>
             <h1>Welcome to</h1><br></br><h1 className="productname">WITNOT</h1>
             <p className="welcome-sub">We're glad to have you here.</p>
           </div>          
           {/* Note: Ensure the path to your assets is correct */}
-          <img src="src/assets/cheating.png" alt="image" className="left-panel-image" />
+          <img src={cheating} alt="image" className="left-panel-image" />
         </div>
 
         <div className="right-panel">

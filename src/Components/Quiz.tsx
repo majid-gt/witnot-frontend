@@ -31,7 +31,7 @@ interface NotificationProps {
 
 const LOGIN_PAGE_URL = '/login';
 const DASHBOARD_PAGE_URL = '/dashboard'; // New constant for dashboard
-const API_BASE_URL = 'http://10.68.179.254:8000/api/';
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
 const TOTAL_QUESTIONS_CONSTANT = 40;
 const TOTAL_TIME_SECONDS = 60 * 60; // 1 Hour
