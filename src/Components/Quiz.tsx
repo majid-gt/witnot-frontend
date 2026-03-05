@@ -106,9 +106,9 @@ const Quiz: React.FC<{ onEnd: () => void }> = ({ onEnd }) => {
   const navigate = useNavigate();
 
   // API URLs that depend on userName
-  const QUIZ_FETCH_API_FULL_URL = `${API_BASE_URL}exam/${userName}/`;
-  const QUIZ_SUBMIT_API_URL = `${API_BASE_URL}exam/${userName}/submit/`;
-  const LOGOUT_API_URL = `${API_BASE_URL}logout/`;
+const QUIZ_FETCH_API_FULL_URL = `${API_BASE_URL}/exam/${userName}/`;
+const QUIZ_SUBMIT_API_URL = `${API_BASE_URL}/exam/${userName}/submit/`;
+const LOGOUT_API_URL = `${API_BASE_URL}/logout/`;
 
   const showNotification = useCallback((msg: string, isError = false, duration = 4000) => {
     const id = notifRef.current++;

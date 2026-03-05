@@ -8,8 +8,7 @@ const Feedback: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
-  const FEEDBACK_API_URL = 'http://10.68.179.254:8000/api/feedback/';
-
+const FEEDBACK_API_URL = `${import.meta.env.VITE_API_URL || "/api"}/feedback/`;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 

@@ -80,7 +80,7 @@ const ExamDashboard: React.FC = () => {
     const accessToken = localStorage.getItem('accessToken');
     const refreshToken = localStorage.getItem('refreshToken');
     try {
-      const response = await fetch('http://10.68.179.254:8000/api/logout/', {
+      const response = await fetch(`${API_BASE_URL}/logout/`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
