@@ -19,7 +19,7 @@ const ExamDashboard: React.FC = () => {
   const hasFetchedRef = useRef(false); 
 
   const isExamUnlocked = currentTime >= examUnlockTime;
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 
   useEffect(() => {

@@ -7,7 +7,7 @@ interface LoginProps {
   onLogin?: () => void; //optional
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 const LOGIN_API_URL = `${API_BASE_URL}/login/`;
 const THANK_YOU_PAGE_URL = "/thanku";
 const MAX_LOGIN_ATTEMPTS = 3;
